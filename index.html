@@ -10,9 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="WDD 230 - Web Frontend Development">
   <meta name="author" content="Michelangelo Pezzini">
+  <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/larger.css">
-  <link rel="stylesheet" href="styles/normalize.css">
   <link rel="icon" href="images/ico.png">
   <title>Michelangelo Pezzini - WDD 230 - Web Frontend Development</title>
 </head>
@@ -22,11 +22,17 @@
     <img src="images/profile.jpg" alt="">
     <h1>Michelangelo Pezzini</h1>
   </header>
+  <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+    Dark Mode
+  </button>
+  <button id="menu"></button>
   <nav>
-    <a href="#">Home</a>
-    <a href="week01/chamber-site-plan.html">Chamber</a>
-    <a href="#">Site Plan</a>
-    <a href="#">Form</a>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Site Plan</a></li>
+      <li><a href="#">Form</a></li>
+    </ul>
   </nav>
   <main>
     <h2>WDD 230: Web Frontend Development</h2>
@@ -54,6 +60,8 @@
     </p>
   </footer>
   <script src="scripts/getDates.js"></script>
+  <script src="scripts/menuHamburguer.js"></script>
+  <script src="scripts/darkMode.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,11 @@
 @media (max-width: 768px) {
-  nav {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+  #menu {
+    display: block;
+  }
+
+  .navigation {
+    flex-direction: column;
+    display: none;
   }
 
   main {
