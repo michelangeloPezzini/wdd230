@@ -172,6 +172,13 @@ button#dark-mode-toggle.dark-mode {
   width: 100%;
 }
 
-.visits {
-  color: #fff;
+.label {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+
+#visits {
+  color: navy;
+  font-weight: bolder;
+  font-size: larger;
 }
