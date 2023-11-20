@@ -171,3 +171,7 @@ button#dark-mode-toggle.dark-mode {
 .maps {
   width: 100%;
 }
+
+.visits {
+  color: #fff;
+}

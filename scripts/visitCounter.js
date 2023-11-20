@@ -1,10 +1,9 @@
-function incrementVisitCounter() {
-  let visitCount = localStorage.getItem('visitCount');
-  visitCount = visitCount ? parseInt(visitCount) + 1 : 1;
-  localStorage.setItem('visitCount', visitCount);
-  document.getElementById('visitCounter').innerText = visitCount;
+const visitsDisplay = document.querySelector('.visits');
+let numVisits = Number(window.localStorage.getItem('numVisits-ls')) || 0;
+if (numVisits !== 0) {
+  visitsDisplay.textContent = numVisits;
+} else {
+  visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
 }
-
-incrementVisitCounter();
-
-
+numVisits++;
+localStorage.setItem('numVisits-ls', numVisits);
