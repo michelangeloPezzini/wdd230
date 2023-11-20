@@ -29,13 +29,19 @@
   <nav>
     <ul class="navigation">
       <li><a href="#">Home</a></li>
-      <li><a href="week03/images/landscape.jpg.webp">WebP</a></li>
       <li><a href="chamber/index.html">Chamber</a></li>
       <li><a href="#">Site Plan</a></li>
       <li><a href="#">Form</a></li>
     </ul>
   </nav>
   <main>
+    <div class="temple">
+      <picture>
+        <source media="(max-width: 500px)" srcset="images\small.webp">
+        <source media="(max-width: 1000px)" srcset="images\medium.webp">
+        <img src="images/large.webp" alt="table setting" width="1500" height="750">
+      </picture>
+    </div>
     <h2>WDD 230: Web Frontend Development</h2>
     <section class="card">
       <h3>Learning Activities</h3>
@@ -51,8 +57,10 @@
     </section>
     <section class="card2">
       <h3>Information</h3>
+      <p>Page visits: <span id="visitCounter">0</span></p>
     </section>
   </main>
+  <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55626.8459064195!2d-50.90766759964303!3d-29.379719867694362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951932427804321f%3A0xa71c25f081e5aea6!2sGramado%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1700503428278!5m2!1spt-BR!2sbr" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
   <footer>
     <p>
     </p>
@@ -60,6 +68,7 @@
 
     </p>
   </footer>
+  <script src="scripts/visitCounter.js"></script>
   <script src="scripts/getDates.js"></script>
   <script src="scripts/menuHamburguer.js"></script>
   <script src="scripts/darkMode.js"></script>

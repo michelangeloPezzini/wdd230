@@ -49,3 +49,5 @@ function deleteChapter(chapter) {
   chaptersArray = chaptersArray.filter((item) => item !== chapter);
   setChapterList();
 }
+
+``
