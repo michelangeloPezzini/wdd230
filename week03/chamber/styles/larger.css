@@ -1,0 +1,30 @@
+@media only screen and (max-width: 600px) {
+  nav ul {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+  #menu-icon {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+  .picture:hover {
+    box-shadow: 0 0 0;
+  }
+}
