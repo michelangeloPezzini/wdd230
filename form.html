@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/form.css">
+  <title>Form</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Marketplace subscription</h1>
+  </header>
+
+  <main>
+    <form action="record.html" method="get">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}" title="Password must be at least 8 characters and alphanumeric">
+
+      <label for="confirmPassword">Confirm Passworld</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required oninput="checkPasswordMatch()">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
+
+      <label for="pageRating">Page Rating</label>
+      <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1" oninput="updateRangeValue()">
+      <span id="ratingValue">1</span>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2023 Your Course. All rights reserved.
+  </footer>
+
+  <script>
+    function checkPasswordMatch() {
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const message = document.getElementById('passwordMismatch');
+
+      if (password !== confirmPassword) {
+        message.innerHTML = 'Passwords do not match.';
+        document.getElementById('password').focus();
+      } else {
+        message.innerHTML = '';
+      }
+    }
+
+    function updateRangeValue() {
+      const rangeValue = document.getElementById('pageRating').value;
+      document.getElementById('ratingValue').innerText = rangeValue;
+    }
+  </script>
+</body>
+
+</html>
